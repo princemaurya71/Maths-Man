@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maths Man - Geometric Calculations</title>
+  <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+  <style>
+    body {
+  background: #111;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: transparent;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  text-align: center;
+  box-shadow: 0px 0px 30px #333;
+}
+
+h1 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+select, input, button {
+  margin: 10px 0;
+  padding: 10px;
+  width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #ffffff;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Geometric Calculations</h1>
+
+    <select id="shape" onchange="showFields()">
+      <option value="">Select Shape</option>
+      <option value="square">Square</option>
+      <option value="rectangle">Rectangle</option>
+      <option value="circle">Circle</option>
+    </select>
+
+    <div id="inputs"></div>
+    <button onclick="calculate()">Calculate</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function showFields() {
+  let shape = document.getElementById("shape").value;
+  let inputs = document.getElementById("inputs");
+
+  if (shape == "square") {
+    inputs.innerHTML = '<input type="number" id="side" placeholder="Enter side">';
+  } 
+  else if (shape == "rectangle") {
+    inputs.innerHTML = `
+      <input type="number" id="length" placeholder="Enter length">
+      <input type="number" id="width" placeholder="Enter width">`;
+  } 
+  else if (shape == "circle") {
+    inputs.innerHTML = '<input type="number" id="radius" placeholder="Enter radius">';
+  } 
+  else {
+    inputs.innerHTML = "";
+  }
+  
+  document.getElementById("result").innerHTML = "";
+}
+
+function calculate() {
+  let shape = document.getElementById("shape").value;
+  let result = "";
+
+  if (shape == "square") {
+    let side = document.getElementById("side").value;
+    result = "Area: " + (side * side) + "<br>Perimeter: " + (4 * side);
+  }
+
+  else if (shape == "rectangle") {
+    let length = document.getElementById("length").value;
+    let width = document.getElementById("width").value;
+    result = "Area: " + (length * width) + "<br>Perimeter: " + (2 * (Number(length) + Number(width)));
+  }
+
+  else if (shape == "circle") {
+    let radius = document.getElementById("radius").value;
+    result = "Area: " + (3.14 * radius * radius).toFixed(2) + "<br>Circumference: " + (2 * 3.14 * radius).toFixed(2);
+  }
+
+  document.getElementById("result").innerHTML = result;
+}
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #111;
+    color: #fff;
+}
+
+nav {
+    height: 8vh;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dadada;
+    padding: 0 20px;
+    /* position: fixed;
+    top: 0;
+    z-index: 1000; */
+}
+
+nav .logo {
+    text-transform: uppercase;
+    font-size: 3vh;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+nav .logo i {
+    height: 5vh;
+    width: 6vh;
+    font-size: 4.8vh;
+    /* background-color: #fff; */
+    color: #fff;
+
+}
+
+nav .logo h3{
+    color: rgb(0, 251, 255);
+}
+
+.features {
+    color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh 3vh;
+    /* background-color: red; */
+}
+
+.features h4 a{
+    font-size: 2vh;
+    padding: 1vh 1.5vh;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+}
+.features h4 a:hover{
+    color: aqua;
+}
+
+#main{
+    height: 100vh;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.manu{
+    height: 100vh;
+    max-width:45vw;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-right: 2px solid #dadada;
+    position: relative;
+    /* opacity: 1; */
+}
+
+.manu .sec1{
+   /* background-color: aqua; */
+   height: 100vh;
+   max-width: 35vw;
+   margin: 10px;
+   /* border-bottom: 1px solid #dadada; */
+}
+
+.sec1 .title1 h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    font-size:3vh;
+    color: aqua;
+}
+summary::marker{
+    content: "";
+}
+
+.content-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3vh;
+    gap: 5%;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #333;
+}
+
+.content-1:hover{
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.content-1 h3{
+    font-size: 2vh;
+    z-index: 8;
+}
+.content-1 p{
+    font-size: 1.8vh;
+    z-index: 8;
+}
+.content-1 a i{
+    font-size: 3vh;
+    z-index: 8;
+}
+.content-1 a{
+    font-size: 4vh;
+    z-index: 8;
+    text-decoration: none;
+    color: white;
+}
+.content-1 .over{
+    height: 100%;
+    width: 100%;
+    background-color: #282626;
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+.content-1:hover .over{
+     transform: translateY(0);
+     opacity: 1;
+}
+
+.main-content{
+    height: 100vh;
+    width: 80vw;
+    background-color:#111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: all ease 1s;
+}
+.calculator {
+    border: 1px solid #717377;
+    padding: 20px;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(220, 230, 246, 0.5);
+}
+
+input {
+    width: 320px;
+    border: none;
+    padding: 24px;
+    margin: 10px;
+    background: transparent;
+    box-shadow: 0px 0px 10px rgba(19, 96, 173, 0.683);
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+}
+
+input::placeholder {
+    color: white;
+    font-size: 40px;
+}
+
+button {
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background: transparent;
+    color: white;
+    font-size: 25px;
+    box-shadow: 0px 5px 15px rgba(95, 97, 97, 0.1);
+    cursor: pointer;
+}
+
+.equalBtn:hover {
+    background-color: red;
+    transform: scale(0.95);
+}
+.btn:hover{
+    box-shadow: 0px 0px 15px white;
+    transform: scale(1.05);
+}
+
+input:hover {
+    box-shadow: 0px 0px 18px rgb(101, 101, 236);
+}
+
+.equalBtn {
+    background-color: orange;
+    transition: all 0.5s ease;  
+}
+
+.operator1 {
+    color: rgb(149, 255, 0);
+}
+
+.operator2 {
+    color: rgb(149, 255, 0);
+}
+
+.operator3 {
+   color: rgb(149, 255, 0);
+}
+
